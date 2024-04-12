@@ -663,9 +663,10 @@ background: var(--white);
     .footer-subscribe{
         margin-left: 80px;
     }
-    .footer-subscribe-list{
+    .footer-form{
         display: flex;
-        gap: 24px; 
+        /* gap: 24px;  */
+        justify-content: space-between;
     }
 
     .footer-text{
@@ -674,7 +675,7 @@ background: var(--white);
         line-height: 150%;
         letter-spacing: 0.02em;
         color: var(--white);
-        margin-bottom: 24px;
+        margin-bottom: 16px;
     }
 
     .footer-input{
@@ -689,7 +690,16 @@ background: var(--white);
         letter-spacing: 0.04em;
         color: var(--white);
         padding-left: 16px;
+        margin-right: 24px;
     }
+
+    .footer-input::placeholder {
+        color: var(--white);
+    }
+        /* .footer-input:hover::placeholder,
+        .footer-input:focus::placeholder{
+        color: var(--white);
+    } */
 
     .footer-input-btn{
         border: none;
@@ -699,8 +709,15 @@ background: var(--white);
         padding: 8px 24px;
         display: flex;
         gap: 16px;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
-        .footer-text-btn{
+
+    .footer-input-btn:focus,
+    .footer-input-btn:hover {
+        background-color: var(--ocean)
+    }
+
+    .footer-text-btn{
         font-weight: 500;
         font-size: 16px;
         line-height: 150%;
@@ -737,8 +754,17 @@ background: var(--white);
         background: var(--navy-blue-modal);
         position: fixed;
         top: 0;
+        opacity: 0;
+        pointer-events: none;
+        visibility: hidden;
     }
 
+    .is-open{
+        opacity: 1;
+        pointer-events: auto;
+        visibility: visible;
+
+    }
     .modal{
         width: 408px;
         min-height: 584px;
@@ -874,6 +900,7 @@ background: var(--white);
 }
 
 .modal-send-btn{
+
     border-radius: 4px;
     padding: 16px 32px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
@@ -881,6 +908,12 @@ background: var(--white);
     margin: 24px auto 0;
     border: 0;
     display: block;
+}
+
+
+.modal-send-btn:focus,
+.modal-send-btn:hover {
+    background-color: var(--ocean)
 }
 
 .checkbox{border:solid 1px red}
@@ -894,3 +927,4 @@ background: var(--white);
     color: var(--white);
     padding: 0 32px;
 }
+
