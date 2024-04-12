@@ -792,6 +792,11 @@ background: var(--white);
         border: 1px solid rgba(0, 0, 0, 0.1);
         background-color: var(--cornflower);
         transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        padding: 0;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
         
         }
         
@@ -803,6 +808,7 @@ background: var(--white);
         .close-modal-btn:hover,
         .close-modal-btn:focus {
         background-color: var(--ocean);
+        border: none;
         }
         
         .close-modal-btn:hover > .modal-close-icone, 
