@@ -508,8 +508,7 @@
               />
             </label>
             <button type="submit" class="footer-input-btn button">
-              <span class="footer-text-btn">Subscribe</span>
-              <svg class="footer-btn-icon" width="24" height="24">
+              Subscribe<svg class="footer-btn-icon" width="24" height="24">
                 <use href="./images/icons.svg#icon-icon-send"></use>
               </svg>
             </button>
@@ -586,10 +585,21 @@
           </div>
 
           <div class="checkbox-modal">
-            <label>
-              <input type="checkbox" name="checkbox-input" value="" />
-              ***
-            </label>
+            <input
+              type="checkbox"
+              name="user-privacy"
+              value="true"
+              id="user-privacy"
+              class="checkbox-input visually-hidden"
+            />
+            <label for="user-privacy" class="checkbox-label"
+              ><span class="checkbox-span"
+                ><svg class="checkbox-accept" width="10" height="8">
+                  <use href="./images/icons.svg#icon-accept"></use></svg
+              ></span>
+              accept the terms and conditions of the
+              <a href="" class="checkbox-link">Privacy Policy</a></label
+            >
           </div>
 
           <button type="submit" class="modal-send-btn">
